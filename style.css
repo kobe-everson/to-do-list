@@ -1,16 +1,13 @@
 /* Establish base for page content */
-
 * {
   box-sizing: border-box; /* So that sizing doesn't freak out */
   margin: 0;
   padding: 0;
 }
 
-/* Style rest of page */
-
 body {
   font-family: "Trebuchet MS";
-  background-color: aliceblue;
+  background-color: wheat;
   padding-top: 2rem;
 }
 
@@ -33,8 +30,12 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   font-size: 1rem;
+}
+
+#to-do-add-btn {
+  cursor: pointer;
 }
 
 #to-do-list {
@@ -44,6 +45,8 @@ main {
 .to-do-item {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem;
 }
 
 .to-do-checkbox {
@@ -55,4 +58,8 @@ main {
 .to-do-checkbox:checked + span {
   text-decoration: line-through;
   color: gray;
+}
+
+#clear-completed-btn {
+  cursor: pointer;
 }

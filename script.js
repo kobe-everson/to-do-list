@@ -1,15 +1,15 @@
 /*
 To-Do List Application:
-- x
-- y
-- z
+- Allows user to add items to a to-do list
+- Allows user to mark off items they have completed
+- Allows user to clear completed items from the list
 */
 
 // Declare input, button, and list variables:
 const toDoInput = document.getElementById("to-do-input");
 const toDoBtn = document.getElementById("to-do-add-btn");
 const toDoList = document.getElementById("to-do-list");
-const clearCompletedBtn = document.getElementById("clear-completed");
+const clearCompletedBtn = document.getElementById("clear-completed-btn");
 
 let toDoArray = [];
 
@@ -97,4 +97,9 @@ const clearCompletedFunction = () => {
 // Event listeners:
 
 toDoBtn.addEventListener("click", addToListFunction);
+toDoInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    addToListFunction();
+  }
+});
 clearCompletedBtn.addEventListener("click", clearCompletedFunction);
